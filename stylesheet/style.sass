@@ -1,0 +1,107 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap')
+
+$header-height: 4.8rem
+$container-color: #fff
+$text-color: #fff
+$body-color: linear-gradient(191.58deg, #101A24 0.7%, #101A23 100%)
+$body-font: 'Montserrat', sans-serif
+$mb-0-5: .5rem
+$mb-0-75: .75rem
+$mb-1: 1rem
+$mb-1-5: 1.5rem
+$mb-2: 2rem
+$mb-2-5: 2.5rem
+$z-tooltip: 10
+$z-fixed: 100
+
+* 
+  box-sizing: border-box
+  padding: 0
+  margin: 0
+
+html 
+  scroll-behavior: smooth
+
+body
+  font-family: $body-font
+  background: $body-color
+  color: $text-color
+
+ul
+  list-style: none
+
+a 
+  text-decoration: none
+
+img 
+  min-width: 100%
+  height: auto
+
+.container 
+  max-width: 968px
+  margin-left: var(--mb-1-5)
+  margin-right: var(--mb-1-5)
+
+.grid 
+  display: grid
+
+.main
+  overflow: hidden
+
+.header
+  width: 100%
+  background-color: $body-color
+  position: fixed
+  top: 0
+  left: 0
+  z-index: $z-fixed
+
+.nav 
+  height: $header-height
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.nav-logo
+  position: relative
+  color: $text-color
+  width: 48px
+  height: 74px
+  left: 30px
+  top: 22px
+  font-style: normal
+  font-weight: bold
+  font-size: 30px
+  line-height: 37px
+
+.menu
+  position: absolute
+  color: $text-color
+  width: 54px
+  height: 22px
+  left: 317px
+  top: 54px
+  font-style: normal
+  font-weight: bold
+  font-size: 18px
+  line-height: 22px
+
+.nav-list
+  display: flex
+  flex-direction: column
+  grid-row-gap: 7.25rem
+  align-items: center
+
+.nav-menu
+  position: fixed
+  background-color: $body-color
+  width: 158px
+  height: 59px
+  left: 135px
+  top: 170px
+  font-style: normal
+  font-weight: bold
+  font-size: 48px
+  line-height: 59px
+
