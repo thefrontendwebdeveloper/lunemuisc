@@ -1,39 +1,55 @@
+// select the body element
+const body = document.querySelector("body");
+// select the nav element
+const nav = document.querySelector("nav");
+// select the nav-list element
+const navList = document.querySelector(".nav-list");
+// select the nav-menu element
+const navMenu = document.querySelector(".nav-menu");
+// select the nav-menu-button element
+const menuBtn = document.querySelector("#menu");
+// select the main element
+const main = document.querySelector("main");
 
-/*=============== SHOW MENU ===============*/
-const navMenu = document.getElementById('nav-menu'),
-      navToggle = document.getElementById('nav-toggle'),
-      navClose = document.getElementById('nav-close')
 
-/*===== MENU SHOW =====*/
-/* Validate if constant exists */
-if(navToggle){
-    navToggle.addEventListener('click', () =>{
-        navMenu.classList.add('show-menu')
-    })
-}
+let nav_isopen = false
 
-/*===== MENU HIDDEN =====*/
-/* Validate if constant exists */
-if(navClose){
-    navClose.addEventListener('click', () =>{
-        navMenu.classList.remove('show-menu')
-    })
-}
+menuBtn.addEventListener("click", () => {
+    if (!nav_isopen) {
+        navMenu.style.transform = "scaleY(1)";
+        nav.style.backgroundColor = "#000";
+        nav_isopen = true
+        console.log('opening')
+        main.backgroundColor = "#000"
+        menuBtn.backgroundColor = "#000"
+        navMenu.backgroundColor = "#000"
+        navList.backgroundColor = "#000"
+        nav.backgroundColor = "#000"
 
-/*=============== REMOVE MENU MOBILE ===============*/
-const navLink = document.querySelectorAll('.nav__link')
-
-function linkAction(){
-    const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link, we remove the show-menu class
-    navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
-
-/*=============== CHANGE BACKGROUND HEADER ===============*/
-function scrollHeader(){
-    const header = document.getElementById('header')
-    // When the scroll is greater than 80 viewport height, add the scroll-header class to the header tag
-    if(this.scrollY >= 80) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
-}
-window.addEventListener('scroll', scrollHeader)
+        main.style.transform = "scaleY(0)"
+        nav.style.opacity = 1
+        main.style.display = "none"
+        
+        body.style.overflow = "hidden"
+        nav.style.height = '100vh';
+        
+    }
+    else {
+        navMenu.style.transform = "scaleY(0)";
+        nav.style.backgroundColor = "transparent";
+        nav_isopen = false
+        console.log('closing')
+        main.backgroundColor = "transparent"
+        menuBtn.backgroundColor = "transparent"
+        navMenu.backgroundColor = "transparent"
+        navList.backgroundColor = "transparent"
+        nav.backgroundColor = "transparent"
+        
+        nav.style.opacity = 0
+        main.style.transform = "scaleY(1)"
+        main.style.display = "block"
+        
+        body.style.overflow = "auto"
+        nav.style.height = '15vh';
+    }
+})
