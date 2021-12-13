@@ -5,6 +5,7 @@ $header-height: 4.8rem
 $container-color: #fff
 $text-color: #fff
 $body-color: linear-gradient(191.58deg, #101A24 0.7%, #101A23 100%)
+$link-color: #8E8E8C
 $body-font: 'Montserrat', sans-serif
 $mb-0-5: .5rem
 $mb-0-75: .75rem
@@ -64,7 +65,7 @@ img
   align-items: center
 
 .nav-logo
-  position: relative
+  position: fixed
   color: $text-color
   width: 48px
   height: 74px
@@ -76,7 +77,8 @@ img
   line-height: 37px
 
 .menu
-  position: absolute
+  position: fixed
+  display: inline-flex
   color: $text-color
   width: 54px
   height: 22px
@@ -92,10 +94,11 @@ img
   flex-direction: column
   grid-row-gap: 7.25rem
   align-items: center
+  // background-color: $body-color
+
 
 .nav-menu
   position: fixed
-  background-color: $body-color
   width: 158px
   height: 59px
   left: 135px
@@ -104,4 +107,39 @@ img
   font-weight: bold
   font-size: 48px
   line-height: 59px
+  // background-color: $body-color
+
+@media screen and (max-width: 767px)
+  .nav-menu
+    position: fixed
+    background-color: $body-color
+    width: 40%
+    height: 100%
+    top: 20%
+    right: -100%
+    z-index: var(--z-fixed)
+
+.nav-link 
+  color: $text-color
+  transition: .3s
+
+.nav-link:hover
+  color: $link-color
+
+.active-link
+  position: relative
+  color: $link-color
+
+.active-link::after
+  content: ''
+  position: absolute
+  bottom: -.5rem
+  left: 0
+  width: 50%
+  height: 2px
+  background-color: $link-color
+
+.show-manu
+  right: 0
+
 

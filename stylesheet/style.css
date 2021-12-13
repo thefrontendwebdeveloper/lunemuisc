@@ -59,7 +59,7 @@ img {
 }
 
 .nav-logo {
-  position: relative;
+  position: fixed;
   color: #fff;
   width: 48px;
   height: 74px;
@@ -72,7 +72,8 @@ img {
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
+  display: inline-flex;
   color: #fff;
   width: 54px;
   height: 22px;
@@ -93,7 +94,6 @@ img {
 
 .nav-menu {
   position: fixed;
-  background-color: linear-gradient(191.58deg, #101A24 0.7%, #101A23 100%);
   width: 158px;
   height: 59px;
   left: 135px;
@@ -102,6 +102,45 @@ img {
   font-weight: bold;
   font-size: 48px;
   line-height: 59px;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-menu {
+    position: fixed;
+    background-color: linear-gradient(191.58deg, #101A24 0.7%, #101A23 100%);
+    width: 40%;
+    height: 100%;
+    top: 20%;
+    right: -100%;
+    z-index: var(--z-fixed);
+  }
+}
+.nav-link {
+  color: #fff;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #8E8E8C;
+}
+
+.active-link {
+  position: relative;
+  color: #8E8E8C;
+}
+
+.active-link::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background-color: #8E8E8C;
+}
+
+.show-manu {
+  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
