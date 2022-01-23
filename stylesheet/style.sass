@@ -1,165 +1,280 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap')
 
-$header-height: 4.8rem
-$container-color: #fff
-$text-color: #fff
-$body-color: linear-gradient(191.58deg, #101A24 0.7%, #101A23 100%)
-$link-color: #8E8E8C
-$body-font: 'Montserrat', sans-serif
-$mb-0-5: .5rem
-$mb-0-75: .75rem
-$mb-1: 1rem
-$mb-1-5: 1.5rem
-$mb-2: 2rem
-$mb-2-5: 2.5rem
-$z-tooltip: 10
-$z-fixed: 100
-
-* 
-  box-sizing: border-box
-  padding: 0
-  margin: 0
-
 *
-  transition: all 0.5s ease
+  box-sizing: border-box
+  margin: 0
+  padding: 0
 
-html 
+html
   scroll-behavior: smooth
+  overflow-x: hidden
+  scrollbar-width: none
 
-body
-  font-family: $body-font
-  background: $body-color
-  color: $text-color
+body 
+  background: linear-gradient(191.58deg, #101A24 0.7%, #101A23 100%)
+  font-family: "Poppins", sans-serif
+  color: #ffffff
 
-ul
-  list-style: none
-
-a 
-  text-decoration: none
-
-img 
-  min-width: 100%
-  height: auto
-
-.container 
-  max-width: 968px
-  // margin-left: $mb-1-5
-  // margin-right: $mb-1-5
-  margin: 0 auto
-
-.grid 
-  display: grid
-
-.main
-  overflow: hidden
-
-.header
-  width: 100vw
-  // height: 100vh
-  // background-color: $body-color
-  position: relative
+header
+  position: fixed
   top: 0
   left: 0
-  z-index: $z-fixed
-
-.nav 
-  // height: $header-height
+  height: 10vh
+  width: 100%
   display: flex
   justify-content: space-between
   align-items: center
-  width: 100vw
-  // height: 100vh
+  padding: 40px 40px
+  // background:  linear-gradient(191.58deg, #101A24 0.7%, #101A23 100%)
+  z-index: 11111111
 
-.nav-logo
-  position: fixed
-  color: $text-color
-  width: 48px
-  height: 74px
-  left: 30px
-  top: 22px
-  font-style: normal
+#logo
+  position: absolute
   font-weight: bold
   font-size: 30px
-  line-height: 37px
+  line-height: 30px
+  text-decoration: none
+  text-transform: uppercase
+  top: 10px
+  z-index: 1
 
-.menu
-  position: fixed
-  display: inline-flex
-  color: $text-color
-  width: 54px
-  height: 22px
-  left: 317px
-  top: 54px
-  font-style: normal
-  font-weight: bold
-  font-size: 18px
-  line-height: 22px
-
-.nav-list
-  display: flex
-  width: 100%
-  flex-direction: column
-  grid-row-gap: 15vw
-  align-items: center
-  // background-color: $body-color
-
-
-.nav-menu
-  position: fixed
-  width: 40vw
-  height: 59px
-  // left: 135px
-  top: 170px
-  // margin-left: 30vw
-  // margin-right: 30vw
-  font-style: normal
-  font-weight: bold
-  font-size: 10vw
-  // line-height: 59px
-  transform: scaleY(0)
-  transition: transform 0.5s ease-in-out
-  // transform-origin: top center
-  transform-origin: bottom center
-  // background-color: royalblue
-
-@media screen and (max-width: 767px)
-  .nav-menu
-    position: relative
-    background-color: $body-color
-    width: 100%
-    height: 100%
-    top: 25%
-    // background-color: green
-    // right: -100%
-    z-index: $z-fixed
-
-.nav-link 
-  color: $text-color
-  transition: .3s
-
-.nav-link:hover
-  color: $link-color
-
-.active-link
-  position: relative
-  color: $link-color
-
-.active-link::after
-  content: ''
+nav ul
   position: absolute
-  bottom: -.5rem
+  display: flex
+  flex-direction: column
+  justify-content: space-evenly
+  align-items: center
+  height: 100vh
+  top: 12px
+  right: 0
   left: 0
+  display: none
+  background:  linear-gradient(191.58deg, #101A24 0.7%, #101A23 100%)
+  
+
+nav ul li
+  position: relative
+  list-style: none
+  text-transform: uppercase
+
+nav ul li a 
+  position: relative
+  margin: 0 15px  
+  text-decoration: none
+  font-weight: bold
+  font-size: 30px
+  color: #ffffff
+  
+  
+a:visited 
+  color: #ffffff
+
+nav ul li a:hover
+  color: #8E8E8C
+
+#menu
+  position: absolute
+  font-weight: bold
+  font-size: 30px
+  text-decoration: none
+  display: flex
+  justify-content: center
+  align-items: center
+  top: 20px
+  padding-left: 1120px
+
+nav ul.active
+  position: absolute
+  display: flex
+  flex-direction: column
+  justify-content: space-evenly
+  align-items: center
+  height: 100vh
+  top: 12px
+  right: 0
+  left: 0
+  background: linear-gradient(191.58deg, #101A24 0.7%, #101A23 100%)
+  
+.home
+  position: relative
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  background-image: url('/img/bg.jpg')
+  height: 100vh
+  width: 100vw
+
+aside
+  position: relative
+  z-index: 11111
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: row
+  top: 50%
+
+.img
+  position: absolute
+  background-image: url('/img/img1.jpg')
+  background-size: contain
+  background-position: center
+  background-repeat: no-repeat
+  height: 50%
+  width: 100vw
+  margin-top: 150px
+
+.home-logo
+  position: absolute
+  font-weight: bold;
+  font-size: 60px;
+  text-transform: uppercase
+  top: 27%
+  left: 34%
+
+.home-tagline
+  position: relative
+  text-transform: uppercase
+  font-size: 27px;
+  transform: rotate(-90deg)
+  padding-left: 350px
+  padding-top: 300px
+  
+.line
+  position: relative
+  border: 2px solid #FFFFFF
   width: 50%
-  height: 2px
-  background-color: $link-color
+  margin-top: 10%
+  margin-left: 13%
 
-// .show-manu
-//   right: 0
+.iconify
+  position: absolute
+  left: 10%
+  width: 40px
+  height: 40px
+  
 
-// .main
-//   position: absolute
-//   top: 0
+#youtube-logo
+  left: 64%
+  bottom: 8%
 
-main
-  transform-origin: top center
+#gmail
+  left: 68%
+  bottom: 8%
+
+#instagram
+  left: 72%
+  bottom: 8%
+
+#spotify-outline
+  left: 76%
+  bottom: 8%
+
+.about
+  position: relative
+  height: 100vh
+  width: 100vw
+
+.img2
+  position: absolute
+  background-image: url('/img/img2.jpg')
+  background-size: contain
+  background-position: left
+  background-repeat: no-repeat
+  height: 50%
+  width: 100%
+  margin-left: 10%
+  margin-top: 8%
+
+p
+  position: absolute
+  font-size: 40px
+  padding: 0 4% 0 28%
+  margin-top: 8% 
+  text-align: justify
+
+.songs
+  position: relative
+  height: 100vh
+  width: 100vw
+
+.img3
+  position: absolute
+  background-image: url('/img/img3.jpg')
+  background-size: contain
+  background-position: left
+  background-repeat: no-repeat
+  height: 30%
+  width: 100%
+  margin-top: 110px
+  margin-left: 10%
+
+.playtext
+  position: absolute
+  font-size: 40px
+  text-transform: uppercase
+  font-weight: 800
+  margin-left: 21%
+  padding: 0
+
+.playlist
+  display: flex
+  align-items: center
+  justify-content: space-evenly
+  padding-top: 23%
+
+#spotify-outline2
+  margin-left: 46%
+
+.playlist2
+  display: flex
+  align-items: center
+  justify-content: space-evenly
+  margin-top: 6%
+
+#spotify-outline3
+  margin-left: 46%
+
+.playlist3
+  display: flex
+  align-items: center
+  justify-content: space-evenly
+  margin-top: 6%
+  
+a
+  text-decoration: none
+
+.line1
+  position: absolute
+  border: 2px #fff solid
+  width: 800px
+  margin-top: 8%
+
+.contact
+  position: relative
+  height: 100vh
+  width: 100vw
+  border: 1px solid #fff
+
+
+.collab
+  position: absolute
+  display: flex
+  text-align: left
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
