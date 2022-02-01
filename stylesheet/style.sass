@@ -5,6 +5,7 @@
   box-sizing: border-box
   margin: 0
   padding: 0
+  color: #ffffff
 
 html
   scroll-behavior: smooth
@@ -28,7 +29,6 @@ header
   align-items: center
   padding: 40px 40px
   background:  linear-gradient(191.58deg, #101A24 0.7%, #101A23 100%)
-  // border: 1px solid white
   z-index: 1
 
 #logo
@@ -39,6 +39,7 @@ header
   text-decoration: none
   text-transform: uppercase
   top: 10px
+  z-index: 2
 
 nav ul
   position: absolute
@@ -52,7 +53,6 @@ nav ul
   left: 0
   display: none
   background:  linear-gradient(191.58deg, #101A24 0.7%, #101A23 100%)
-  
 
 nav ul li
   position: relative
@@ -66,8 +66,7 @@ nav ul li a
   font-weight: bold
   font-size: 30px
   color: #ffffff
-  
-  
+
 a:visited 
   color: #ffffff
 
@@ -84,6 +83,7 @@ nav ul li a:hover
   align-items: center
   top: 20px
   padding-left: 1120px
+  z-index: 3
 
 nav ul.active
   position: absolute
@@ -108,7 +108,6 @@ nav ul.active
 
 aside
   position: relative
-  z-index: 11111
   display: flex
   align-items: center
   justify-content: center

@@ -2,6 +2,9 @@
   #logo {
     margin-top: 10px;
   }
+  #menu {
+    z-index: 5;
+  }
   .home {
     max-width: 100vw;
     max-height: 100vh;

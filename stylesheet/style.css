@@ -4,6 +4,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: #ffffff;
 }
 
 html {
@@ -46,6 +47,7 @@ header {
   text-decoration: none;
   text-transform: uppercase;
   top: 10px;
+  z-index: 2;
 }
 
 nav ul {
@@ -110,6 +112,7 @@ nav ul li a:hover {
           align-items: center;
   top: 20px;
   padding-left: 1120px;
+  z-index: 3;
 }
 
 nav ul.active {
@@ -146,7 +149,6 @@ nav ul.active {
 
 aside {
   position: relative;
-  z-index: 11111;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
