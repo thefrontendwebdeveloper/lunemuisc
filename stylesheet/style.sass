@@ -29,19 +29,20 @@ header
   align-items: center
   padding: 40px 40px
   background:  linear-gradient(191.58deg, #101A24 0.7%, #101A23 100%)
+  clip-path: circle(0vw at calc(100vw - 87.5px) 87.5px)
+  transition: all 1s ease
   z-index: 1
-  // border: 1px solid white
-
 
 #logo
-  position: absolute
+  position: fixed
   font-weight: bold
   font-size: 30px
   line-height: 30px
   text-decoration: none
   text-transform: uppercase
-  top: 10px
-  z-index: 2
+  top: 25px
+  left: 5%
+  z-index: 4
 
 nav ul
   position: absolute
@@ -76,16 +77,16 @@ nav ul li a:hover
   color: #8E8E8C
 
 #menu
-  position: absolute
+  position: fixed
   font-weight: bold
   font-size: 30px
   text-decoration: none
   display: flex
   justify-content: center
   align-items: center
-  top: 20px
+  top: 35px
   padding-left: 1120px
-  z-index: 3
+  z-index: 4
 
 nav ul.active
   position: absolute
@@ -98,7 +99,7 @@ nav ul.active
   right: 0
   left: 0
   background: linear-gradient(191.58deg, #101A24 0.7%, #101A23 100%)
-  
+
 .home
   position: relative
   background-size: cover
