@@ -27,3 +27,9 @@ const toggleNav = () => {
 };
 
 btn.addEventListener("click", toggleNav);
+
+AOS.init({
+  offset: 120,
+  duration: 1000,
+  // delay: 500
+});
